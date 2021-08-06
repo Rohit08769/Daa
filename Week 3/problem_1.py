@@ -1,19 +1,19 @@
 def insertion_sort(l1):
     global j
-    shift, comparision = 0,0
+    shift, comparison = 0, 0
     for i in range(1, len(l1)):
         temp = l1[i]
-        j=i-1
-        while l1[j]>temp and j>=0:
+        j = i - 1
+        while l1[j] > temp and j >= 0:
             l1[j + 1] = l1[j]
             shift += 1
-            comparision+=1
-            j-=1
+            comparison += 1
+            j -= 1
 
         l1[j + 1] = temp
-        comparision+=1
+        comparison += 1
 
-    print(f"{' '.join(list(map(str,l1)))} \ncomparision = {shift} \nshifts = {comparision}")
+    print(f"{' '.join(list(map(str, l1)))} \ncomparison = {shift} \nshifts = {comparison}")
 
 
 test_case = int(input())
